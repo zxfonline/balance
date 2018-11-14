@@ -31,7 +31,7 @@ func init() {
 		println("server start error:UCServerList json unmarshal failed:", err)
 		os.Exit(1)
 	}
-	repr.Repr(C_UCServerList, repr.Indent(" "))
+	println(repr.String(C_UCServerList, repr.Indent(" ")))
 	if len(C_UCServerList) == 0 {
 		println("server start error:UCServerList is nil,")
 		os.Exit(1)
